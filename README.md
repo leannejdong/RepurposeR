@@ -24,3 +24,8 @@ Users will be able to search for existing repurposing suggestions by idea title 
 Additionally, the application will implement a binary search functionality to locate records by idea title within a sorted list, enhancing search efficiency.
 
 Our Repurposing Suggestions Software project aims to streamline the process of repurposing waste items by providing staff with a centralized platform to access and utilize repurposing ideas effectively.
+
+
+## Build
+
+![Re-purposing Suggestions](/Users/leanne/devTafe/PRG443/RepurposeR/Screenshot 2024-04-16 at 1.29.24 AM.png)
