@@ -61,15 +61,6 @@ public class MainForm extends JFrame implements ActionListener {
         txtWebLink = UIBuilderLibrary.BuildJTextFieldInlineBelow(18, 4, layout, txtImageLocation);
         add(txtWebLink);
 
-//        txtPrimaryMaterials = UIBuilderLibrary.BuildJTextFieldInlineBelow(18, 4, layout, txtWebLink);
-//        add(txtPrimaryMaterials);
-
-//        JScrollPane scrollA = new JScrollPane(txtPrimaryMaterials);
-//        scrollA.setPreferredSize(new Dimension(250, 30));
-//        scrollA.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-//        layout.putConstraint(SpringLayout.NORTH, scrollA, 18, SpringLayout.SOUTH, txtWebLink);
-//        layout.putConstraint(SpringLayout.WEST, scrollA, 4, SpringLayout.WEST, txtWebLink);
-//        add(scrollA);
 
         txtPrimaryMaterials = new JTextArea();
         txtPrimaryMaterials.setLineWrap(true);
@@ -92,7 +83,29 @@ public class MainForm extends JFrame implements ActionListener {
         layout.putConstraint(SpringLayout.WEST, scrollB, 20, SpringLayout.WEST, lblConstructionHints);
         add(scrollB);
 //
-        btnFirst = UIBuilderLibrary.BuildJButtonInlineBelow(40, 25, "|<", 40, this, layout,scrollB);
+
+//
+       // this.setLayout(new BorderLayout());
+        lblFind = UIBuilderLibrary.BuildJLabelWithNorthWestAnchor("Find:", 380, 20, layout, this);
+        add(lblFind);
+        txtFind = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 5, layout, lblFind);
+        add(txtFind);
+
+        btnFind = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "FIND", 5, this, layout, txtFind);
+        this.add(btnFind);
+        btnNew = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "NEW", 5, this, layout, btnFind);
+        this.add(btnNew);
+        btnSave = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "SAVE", 5, this, layout, btnNew);
+        add(btnSave);
+        btnDelete = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "DELETE", 5, this, layout, btnSave);
+        add(btnDelete);
+
+//        lblFind = UIBuilderLibrary.BuildJLabelInlineBelow("Find:", 5, layout, btnDelete);
+//        add(lblFind);
+//        txtFind = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 5, layout, lblFind);
+//        add(txtFind);
+
+        btnFirst = UIBuilderLibrary.BuildJButtonInlineBelow(40, 25, "|<", 40, this, layout,btnDelete);
         btnFirst.setMargin(new Insets(0, 0, 0, 0));
         add(btnFirst);
         btnPrevious = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, "<<", 0, this, layout, btnFirst);
@@ -104,37 +117,27 @@ public class MainForm extends JFrame implements ActionListener {
         btnLast = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, ">|", 0, this, layout, btnNext);
         btnLast.setMargin(new Insets(0, 0, 0, 0));
         add(btnLast);
+
+
 //
-        btnNew = UIBuilderLibrary.BuildJButtonWithNorthWestAnchor(120, 25, "NEW", 220, 20, this, layout, this);
-        add(btnNew);
-        btnSave = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "SAVE", 5, this, layout, btnNew);
-        add(btnSave);
-        btnDelete = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "DELETE", 5, this, layout, btnSave);
-        add(btnDelete);
-        lblFind = UIBuilderLibrary.BuildJLabelInlineBelow("Find:", 5, layout, btnDelete);
-        add(lblFind);
-        txtFind = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 5, layout, lblFind);
-        add(txtFind);
-//
-//
+        btnSort = UIBuilderLibrary.BuildJButtonInlineBelow(130, 25, "Sort by Idea Title", 5, this, layout, scrollB);
+        add(btnSort);
+        btnBinary = UIBuilderLibrary.BuildJButtonInlineToRight(200, 25, "Binary Search by Idea Title:", 5, this, layout, btnSort);
+        add(btnBinary);
+        btnFilterBy = UIBuilderLibrary.BuildJButtonInlineToRight(80, 25, "Filter by:", 5, this, layout, btnBinary);
+        add(btnFilterBy);
+
+        txtFilterBy = UIBuilderLibrary.BuildJTextFieldInlineToRight(16, 0, layout, btnFilterBy);
+        add(txtFilterBy);
+
         txtOutput = new JTextArea();
         txtOutput.setLineWrap(true);
         JScrollPane outputPane = new JScrollPane(txtOutput);
         outputPane.setPreferredSize(new Dimension(360, 100));
         outputPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        layout.putConstraint(SpringLayout.NORTH, outputPane, 20, SpringLayout.SOUTH, btnFirst);
+        layout.putConstraint(SpringLayout.NORTH, outputPane, 20, SpringLayout.SOUTH, btnSort);
         layout.putConstraint(SpringLayout.WEST, outputPane, 10, SpringLayout.WEST, this);
         add(outputPane);
-//
-        btnSort = UIBuilderLibrary.BuildJButtonInlineBelow(80, 25, "SORT", 5, this, layout, outputPane);
-        add(btnSort);
-        btnBinary = UIBuilderLibrary.BuildJButtonInlineToRight(90, 25, "BINARY", 5, this, layout, btnSort);
-        add(btnBinary);
-        btnFilterBy = UIBuilderLibrary.BuildJButtonInlineToRight(80, 25, "FILTER", 5, this, layout, btnBinary);
-        add(btnFilterBy);
-
-        txtFilterBy = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 0, layout, btnFilterBy);
-        add(txtFilterBy);
 //
 //        // TEST DATA ONLY - DELETE ONCE FILE MANAGEMENT IS SETUP
 //        RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
@@ -209,6 +212,8 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
         numberOfEntries = 4;
 
     }
+
+
 
 
     @Override

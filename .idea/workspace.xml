@@ -4,19 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71a40eef-2e2b-43d9-a243-efe578fa14c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepurposeR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RepurposingSuggestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UIBuilderLibrary.java" afterDir="false" />
+    <list default="true" id="71a40eef-2e2b-43d9-a243-efe578fa14c8" name="Changes" comment="pre UI codes">
+      <change afterPath="$PROJECT_DIR$/RePurposingSuggestions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/Main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/MainForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/RepurposingSuggestion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/UIBuilderLibrary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/legal/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/legal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/legal/jquery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/legal/jqueryUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/module-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/script-dir/jquery-3.6.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/script-dir/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/script-dir/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/search-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/tag-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +114,36 @@
       <workItem from="1712983028753" duration="8700000" />
       <workItem from="1712993363819" duration="8615000" />
       <workItem from="1713025447432" duration="1771000" />
-      <workItem from="1713069137684" duration="20287000" />
+      <workItem from="1713069137684" duration="20792000" />
+      <workItem from="1713183602817" duration="7094000" />
     </task>
+    <task id="LOCAL-00001" summary="pre UI codes">
+      <option name="closed" value="true" />
+      <created>1713107567927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713107567927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pre UI codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre UI codes" />
   </component>
 </project>
