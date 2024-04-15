@@ -28,4 +28,4 @@ Our Repurposing Suggestions Software project aims to streamline the process of r
 
 ## Build
 
-![Re-purposing Suggestions](/Users/leanne/devTafe/PRG443/RepurposeR/Screenshot 2024-04-16 at 1.29.24 AM.png)
+![Re-purposing Suggestions](Screenshot 2024-04-16 at 1.29.24 AM.png)
