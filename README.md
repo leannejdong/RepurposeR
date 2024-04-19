@@ -29,3 +29,72 @@ Our Repurposing Suggestions Software project aims to streamline the process of r
 ## Build
 
 ![Re-purposing Suggestions](Screenshot 2024-04-16 at 1.29.24 AM.png)
+
+
+## Class diagram
+
+```mermaid
+classDiagram
+    class FileData {
+        - fileData: RepurposingSuggestion[]
+        - count: int
+        + FileData()
+    }
+    class FileManager {
+        - fileName: String
+        + WriteToFile(RePurposingSuggestionsData)
+        + ReadFromFile(): FileData
+    }
+    class MainForm {
+        - fileManager: FileManager
+        - layout: SpringLayout
+        - lblTitle: JLabel
+        - lblImageLocation: JLabel
+        - lblWebLink: JLabel
+        - lblPrimaryMaterials: JLabel
+        - lblConstructionHints: JLabel
+        - txtTitle: JTextField
+        - txtImageLocation: JTextField
+        - txtWebLink: JTextField
+        - txtPrimaryMaterials: JTextArea
+        - txtConstructionHints: JTextArea
+        - txtFind: JTextField
+        - txtFilterBy: JTextField
+        - btnFind: JButton
+        - btnNew: JButton
+        - btnSave: JButton
+        - btnDelete: JButton
+        - btnFirst: JButton
+        - btnPrevious: JButton
+        - btnNext: JButton
+        - btnLast: JButton
+        - btnSort: JButton
+        - btnBinary: JButton
+        - btnFilterBy: JButton
+        - txtOutput: JTextArea
+        + MainForm()
+        + actionPerformed(e: ActionEvent): void
+        - DisplayCurrentEntry(): void
+    }
+    class RepurposingSuggestion {
+        - Title: String
+        - ImageLocation: String
+        - WebLink: String
+        - PrimaryMaterials: String
+        - ConstructionHints: String
+        + RepurposingSuggestion()
+        + RepurposingSuggestion(title: String, imageLocation: String, webLink: String, primaryMaterials: String, constructionHints: String)
+        + toString(): String
+        + compareTo(other: Object): int
+    }
+    class Main {
+        + main(args: String[]): void
+    }
+    MainForm -up- FileManager
+    MainForm -up- RepurposingSuggestion
+    MainForm --* JLabel
+    MainForm --* JTextField
+    MainForm --* JTextArea
+    MainForm --* JButton
+    MainForm --* SpringLayout
+```
