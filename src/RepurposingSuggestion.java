@@ -1,3 +1,9 @@
+/**
+ * This class is used to store the information for a repurposing suggestion.
+ * It contains the title of the suggestion, the location of the image, a web link to the suggestion, the primary materials used in the suggestion, and construction hints for the suggestion.
+ * It also contains a toString method to convert the object to a string, and a compareTo method to compare the object to another object.
+ */
+
 public class RepurposingSuggestion implements Comparable
 {
     String Title;
@@ -13,7 +19,7 @@ public class RepurposingSuggestion implements Comparable
 
 
     /**
-     *
+     * Construct a RepurposingSuggestion object with the specified title, image location, web link, primary materials, and construction hints
      * @param title
      * @param imageLocation
      * @param webLink

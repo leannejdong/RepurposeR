@@ -7,6 +7,10 @@ import java.awt.event.WindowEvent;
 import java.util.Arrays;
 import java.util.Locale;
 
+/**
+ * This class is the main form of the application.
+ * It contains the UI elements and event handlers for the form.
+ */
 public class MainForm extends JFrame implements ActionListener {
     FileManager fileManager = new FileManager();
     SpringLayout layout = new SpringLayout();
@@ -28,6 +32,10 @@ public class MainForm extends JFrame implements ActionListener {
     boolean isNewEntry = false;
 
 
+    /**
+     * Constructor for the MainForm class.
+     * Sets up the UI elements and event handlers.
+     */
     public MainForm() throws HeadlessException {
         setTitle("Re-Purposing Suggestions");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,6 +45,7 @@ public class MainForm extends JFrame implements ActionListener {
 
 
 
+        /* Load test data */
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -138,33 +147,7 @@ public class MainForm extends JFrame implements ActionListener {
         layout.putConstraint(SpringLayout.NORTH, outputPane, 20, SpringLayout.SOUTH, btnSort);
         layout.putConstraint(SpringLayout.WEST, outputPane, 10, SpringLayout.WEST, this);
         add(outputPane);
-//
-//        // TEST DATA ONLY - DELETE ONCE FILE MANAGEMENT IS SETUP
-//        RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
-//                "C:\\MyIdeas\\OutdoorIdeas\\BirdBath.jpg",
-//                "www.MyIdeas...\\birdbath",
-//                "Options: concrete bowl, recycled sink, stand (brick, concrete, wood)",
-//                "1. Clear level ground, 2. Place stand securely, 3. Secure bowl to stand");
-//
-//        RepurposingSuggestionArray[1] = new RepurposingSuggestion("Small fish bowl",
-//                "C:\\MyIdeas\\IndoorIdeas\\FishBowl.jpg",
-//                "www.MyIdeas...\\fishbowl",
-//                "Options: recycled glass or clear plastic bowl",
-//                "1. Locate recycled material, 2. Clean in preparation for use.");
-//
-//        RepurposingSuggestionArray[2] = new RepurposingSuggestion("Artistic Display",
-//                "C:\\MyIdeas\\IndoorIdeas\\ArtisticDisplay.jpg",
-//                "www.MyIdeas...\\artdisplay",
-//                "Options: recycled plastic, paper,cardboard, ...",
-//                "1. Assemble materials, 2. Plan art work, 3. Create art work");
-//        RepurposingSuggestionArray[3] = new RepurposingSuggestion("Small herb garden",
-//                "C:\\MyIdeas\\OutdoorIdeas\\HerbGarden.jpg",
-//                "www.MyIdeas...\\herbgarden",
-//                "Options: recycled planks of wood, metal",
-//                "1. Build herb garden structure, 2. Clear level ground, 3. Place garden securely");
-//
-//        numberOfEntries = 4;
-//
+
         // Populate the UI with data read from the file using `ReadFromFile` method of the `FileManager` class.
         // It iterates over the `FileData` object and appends each repurposing suggestion to the `txtOutput` text area.
         FileData data = fileManager.ReadFromFile();
@@ -214,8 +197,10 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
     }
 
 
-
-
+    /**
+     * Event handler for the buttons on the form.
+     * @param e ActionEvent object representing the event performed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() != btnNew && e.getSource() != btnSave) {
@@ -329,6 +314,9 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
         }
     }
 
+    /**
+     * Display the current entry in the form
+     */
     private void DisplayCurrentEntry()
     {
         if(numberOfEntries == 0)

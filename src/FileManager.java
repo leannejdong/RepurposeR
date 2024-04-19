@@ -3,12 +3,17 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+/**
+ * This class is responsible for reading and writing data to a file.
+ * The file is called RePurposingSuggestions.txt
+ */
+
 public class FileManager {
     String fileName = "RePurposingSuggestions.txt";
 
     /**
-     *
-     * @param RePurposingSuggestionsData
+     * Write repurposing suggestions to the file
+     * @param RePurposingSuggestionsData Array of repurposing suggestions to write
      */
     public void WriteToFile(RepurposingSuggestion[] RePurposingSuggestionsData)
     {
@@ -35,8 +40,8 @@ public class FileManager {
     }
 
     /**
-     *
-     * @return
+     * Read repurposing suggestions from the file
+     * @return FileData object containing the repurposing suggestions read from the file
      */
     public FileData ReadFromFile()
     {
