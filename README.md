@@ -98,3 +98,56 @@ classDiagram
     MainForm --* JButton
     MainForm --* SpringLayout
 ```
+
+## Structure charts
+
+### Managing GUI elements
+
+```mermaid
+
+graph TD;
+    MainForm(MainForm)
+    MainForm --> lblTitle;
+    MainForm --> lblImageLocation;
+    MainForm --> lblWebLink;
+    MainForm --> lblPrimaryMaterials;
+    MainForm --> lblConstructionHints;
+    MainForm --> txtTitle;
+    MainForm --> txtImageLocation;
+    MainForm --> txtWebLink;
+    MainForm --> txtPrimaryMaterials;
+    MainForm --> txtConstructionHints;
+    MainForm --> txtFind;
+    MainForm --> txtFilterBy;
+    MainForm --> btnFind;
+    MainForm --> btnNew;
+    MainForm --> btnSave;
+    MainForm --> btnDelete;
+    MainForm --> btnFirst;
+    MainForm --> btnPrevious;
+    MainForm --> btnNext;
+    MainForm --> btnLast;
+    MainForm --> btnSort;
+    MainForm --> btnBinary;
+    MainForm --> btnFilterBy;
+    MainForm --> txtOutput;
+```
+
+### Managing user action
+
+```mermaid
+   graph TD;
+    MainForm(MainForm)
+    MainForm --> actionPerformed;
+    actionPerformed -->|btnNew| handleNewEntry;
+    actionPerformed -->|btnSave| handleSaveEntry;
+    actionPerformed -->|btnDelete| handleDeleteEntry;
+    actionPerformed -->|btnFirst| handleFirstEntry;
+    actionPerformed -->|btnPrevious| handlePreviousEntry;
+    actionPerformed -->|btnNext| handleNextEntry;
+    actionPerformed -->|btnLast| handleLastEntry;
+    actionPerformed -->|btnFind| handleFind;
+    actionPerformed -->|btnSort| handleSort;
+    actionPerformed -->|btnBinary| handleBinarySearch;
+    actionPerformed -->|btnFilterBy| handleFilterBy;
+```
