@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"MainForm"},{"p":"<Unnamed>","l":"RepurposingSuggestion"},{"p":"<Unnamed>","l":"UIBuilderLibrary"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"FileData"},{"p":"<Unnamed>","l":"FileManager"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"MainForm"},{"p":"<Unnamed>","l":"RepurposingSuggestion"},{"p":"<Unnamed>","l":"UIBuilderLibrary"}];updateSearchResults();
