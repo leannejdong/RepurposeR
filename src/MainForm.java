@@ -168,7 +168,7 @@ public class MainForm extends JFrame implements ActionListener {
 
     }
 
-    private void loadTestData() {
+    void loadTestData() {
 RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
                 "C:\\MyIdeas\\OutdoorIdeas\\BirdBath.jpg",
                 "www.MyIdeas...\\birdbath",
