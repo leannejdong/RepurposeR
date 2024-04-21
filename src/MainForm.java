@@ -53,100 +53,18 @@ public class MainForm extends JFrame implements ActionListener {
             }
         });
 //
-        lblTitle = UIBuilderLibrary.BuildJLabelWithNorthWestAnchor("Idea Title:", 30, 40, layout, this);
-        add(lblTitle);
-        lblImageLocation = UIBuilderLibrary.BuildJLabelInlineBelow("Image File:", 18, layout, lblTitle);
-        add(lblImageLocation);
-        lblWebLink = UIBuilderLibrary.BuildJLabelInlineBelow("Web link:", 18, layout, lblImageLocation);
-        add(lblWebLink);
-        lblPrimaryMaterials = UIBuilderLibrary.BuildJLabelInlineBelow("Primary Material:", 18, layout, lblWebLink);
-        add(lblPrimaryMaterials);
-        lblConstructionHints = UIBuilderLibrary.BuildJLabelInlineBelow("Construction Hints:", 68, layout, lblPrimaryMaterials);
-        add(lblConstructionHints);
-        txtTitle = UIBuilderLibrary.BuildJTextFieldInlineToRight(10, 20, layout, lblTitle);
-        add(txtTitle);
-        txtImageLocation = UIBuilderLibrary.BuildJTextFieldInlineBelow(18, 4, layout, txtTitle);
-        add(txtImageLocation);
-        txtWebLink = UIBuilderLibrary.BuildJTextFieldInlineBelow(18, 4, layout, txtImageLocation);
-        add(txtWebLink);
+        createLabelAndTextfield(layout);
 
 
-        txtPrimaryMaterials = new JTextArea();
-        txtPrimaryMaterials.setLineWrap(true);
-        JScrollPane scrollA = new JScrollPane(txtPrimaryMaterials);
-        scrollA.setPreferredSize(new Dimension(250, 40));
-        scrollA.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        layout.putConstraint(SpringLayout.NORTH, scrollA, 20, SpringLayout.SOUTH, lblPrimaryMaterials);
-        layout.putConstraint(SpringLayout.WEST, scrollA, 10, SpringLayout.WEST, lblPrimaryMaterials);
-        add(scrollA);
+        createScrollableTextArea();
 
 
-
-        txtConstructionHints = new JTextArea();
-        txtConstructionHints.setLineWrap(true);
-        JScrollPane scrollB = new JScrollPane(txtConstructionHints);
-        scrollB.setPreferredSize(new Dimension(250, 60));
-        scrollB.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-//        layout.putConstraint(SpringLayout.NORTH, scrollB, 4, SpringLayout.SOUTH, txtWebLink);
-        layout.putConstraint(SpringLayout.NORTH, scrollB, 20, SpringLayout.SOUTH, lblConstructionHints);
-        layout.putConstraint(SpringLayout.WEST, scrollB, 20, SpringLayout.WEST, lblConstructionHints);
-        add(scrollB);
+        JScrollPane scrollB = getjScrollPane();
 //
 
-//
-       // this.setLayout(new BorderLayout());
-        lblFind = UIBuilderLibrary.BuildJLabelWithNorthWestAnchor("Find:", 380, 20, layout, this);
-        add(lblFind);
-        txtFind = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 5, layout, lblFind);
-        add(txtFind);
+        buildButtonAndTextfield(scrollB);
 
-        btnFind = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "FIND", 5, this, layout, txtFind);
-        this.add(btnFind);
-        btnNew = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "NEW", 5, this, layout, btnFind);
-        this.add(btnNew);
-        btnSave = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "SAVE", 5, this, layout, btnNew);
-        add(btnSave);
-        btnDelete = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "DELETE", 5, this, layout, btnSave);
-        add(btnDelete);
-
-//        lblFind = UIBuilderLibrary.BuildJLabelInlineBelow("Find:", 5, layout, btnDelete);
-//        add(lblFind);
-//        txtFind = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 5, layout, lblFind);
-//        add(txtFind);
-
-        btnFirst = UIBuilderLibrary.BuildJButtonInlineBelow(40, 25, "|<", 40, this, layout,btnDelete);
-        btnFirst.setMargin(new Insets(0, 0, 0, 0));
-        add(btnFirst);
-        btnPrevious = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, "<<", 0, this, layout, btnFirst);
-        btnPrevious.setMargin(new Insets(0, 0, 0, 0));
-        add(btnPrevious);
-        btnNext = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, ">>", 0, this, layout, btnPrevious);
-        btnNext.setMargin(new Insets(0, 0, 0, 0));
-        add(btnNext);
-        btnLast = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, ">|", 0, this, layout, btnNext);
-        btnLast.setMargin(new Insets(0, 0, 0, 0));
-        add(btnLast);
-
-
-//
-        btnSort = UIBuilderLibrary.BuildJButtonInlineBelow(130, 25, "Sort by Idea Title", 5, this, layout, scrollB);
-        add(btnSort);
-        btnBinary = UIBuilderLibrary.BuildJButtonInlineToRight(200, 25, "Binary Search by Idea Title:", 5, this, layout, btnSort);
-        add(btnBinary);
-        btnFilterBy = UIBuilderLibrary.BuildJButtonInlineToRight(80, 25, "Filter by:", 5, this, layout, btnBinary);
-        add(btnFilterBy);
-
-        txtFilterBy = UIBuilderLibrary.BuildJTextFieldInlineToRight(16, 0, layout, btnFilterBy);
-        add(txtFilterBy);
-
-        txtOutput = new JTextArea();
-        txtOutput.setLineWrap(true);
-        JScrollPane outputPane = new JScrollPane(txtOutput);
-        outputPane.setPreferredSize(new Dimension(360, 100));
-        outputPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        layout.putConstraint(SpringLayout.NORTH, outputPane, 20, SpringLayout.SOUTH, btnSort);
-        layout.putConstraint(SpringLayout.WEST, outputPane, 10, SpringLayout.WEST, this);
-        add(outputPane);
+        addLargeTextBox();
 
         // Populate the UI with data read from the file using `ReadFromFile` method of the `FileManager` class.
         // It iterates over the `FileData` object and appends each repurposing suggestion to the `txtOutput` text area.
@@ -167,6 +85,120 @@ public class MainForm extends JFrame implements ActionListener {
 
 
     }
+
+    private void buildButtonAndTextfield(JScrollPane scrollB) {
+        lblFind = UIBuilderLibrary.BuildJLabelWithNorthWestAnchor("Find:", 380, 20, layout, this);
+        add(lblFind);
+        txtFind = UIBuilderLibrary.BuildJTextFieldInlineToRight(6, 5, layout, lblFind);
+        add(txtFind);
+
+        btnFind = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "FIND", 5, this, layout, txtFind);
+        this.add(btnFind);
+        btnNew = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "NEW", 5, this, layout, btnFind);
+        this.add(btnNew);
+        btnSave = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "SAVE", 5, this, layout, btnNew);
+        add(btnSave);
+        btnDelete = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "DELETE", 5, this, layout, btnSave);
+        add(btnDelete);
+
+
+        btnFirst = UIBuilderLibrary.BuildJButtonInlineBelow(40, 25, "|<", 40, this, layout,btnDelete);
+        btnFirst.setMargin(new Insets(0, 0, 0, 0));
+        add(btnFirst);
+        btnPrevious = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, "<<", 0, this, layout, btnFirst);
+        btnPrevious.setMargin(new Insets(0, 0, 0, 0));
+        add(btnPrevious);
+        btnNext = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, ">>", 0, this, layout, btnPrevious);
+        btnNext.setMargin(new Insets(0, 0, 0, 0));
+        add(btnNext);
+        btnLast = UIBuilderLibrary.BuildJButtonInlineToRight(40, 25, ">|", 0, this, layout, btnNext);
+        btnLast.setMargin(new Insets(0, 0, 0, 0));
+        add(btnLast);
+        btnExit = UIBuilderLibrary.BuildJButtonInlineBelow(120, 25, "EXIT", 5, this, layout, btnFirst);
+        add(btnExit);
+
+
+//
+        btnSort = UIBuilderLibrary.BuildJButtonInlineBelow(130, 25, "Sort by Idea Title", 5, this, layout, scrollB);
+        add(btnSort);
+        btnBinary = UIBuilderLibrary.BuildJButtonInlineToRight(200, 25, "Binary Search by Idea Title:", 5, this, layout, btnSort);
+        add(btnBinary);
+        btnFilterBy = UIBuilderLibrary.BuildJButtonInlineToRight(80, 25, "Filter by:", 5, this, layout, btnBinary);
+        add(btnFilterBy);
+
+        txtFilterBy = UIBuilderLibrary.BuildJTextFieldInlineToRight(16, 0, layout, btnFilterBy);
+        add(txtFilterBy);
+    }
+
+    private JScrollPane getjScrollPane() {
+        txtConstructionHints = new JTextArea();
+        txtConstructionHints.setLineWrap(true);
+        JScrollPane scrollB = new JScrollPane(txtConstructionHints);
+        scrollB.setPreferredSize(new Dimension(250, 60));
+        scrollB.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        layout.putConstraint(SpringLayout.NORTH, scrollB, 20, SpringLayout.SOUTH, lblConstructionHints);
+        layout.putConstraint(SpringLayout.WEST, scrollB, 20, SpringLayout.WEST, lblConstructionHints);
+        add(scrollB);
+        return scrollB;
+    }
+
+    private void createScrollableTextArea() {
+        txtPrimaryMaterials = new JTextArea();
+        txtPrimaryMaterials.setLineWrap(true);
+        JScrollPane scrollA = new JScrollPane(txtPrimaryMaterials);
+        scrollA.setPreferredSize(new Dimension(250, 40));
+        scrollA.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        layout.putConstraint(SpringLayout.NORTH, scrollA, 20, SpringLayout.SOUTH, lblPrimaryMaterials);
+        layout.putConstraint(SpringLayout.WEST, scrollA, 10, SpringLayout.WEST, lblPrimaryMaterials);
+        add(scrollA);
+    }
+
+    /**
+     * Create the text fields for the form
+     */
+    private void createLabelAndTextfield(SpringLayout layout) {
+        lblTitle = UIBuilderLibrary.BuildJLabelWithNorthWestAnchor("Idea Title:", 30, 40, layout, this);
+        add(lblTitle);
+        lblImageLocation = UIBuilderLibrary.BuildJLabelInlineBelow("Image File:", 18, layout, lblTitle);
+        add(lblImageLocation);
+        lblWebLink = UIBuilderLibrary.BuildJLabelInlineBelow("Web link:", 18, layout, lblImageLocation);
+        add(lblWebLink);
+        lblPrimaryMaterials = UIBuilderLibrary.BuildJLabelInlineBelow("Primary Material:", 18, layout, lblWebLink);
+        add(lblPrimaryMaterials);
+        lblConstructionHints = UIBuilderLibrary.BuildJLabelInlineBelow("Construction Hints:", 68, layout, lblPrimaryMaterials);
+        add(lblConstructionHints);
+        txtTitle = UIBuilderLibrary.BuildJTextFieldInlineToRight(10, 20, layout, lblTitle);
+        add(txtTitle);
+        txtImageLocation = UIBuilderLibrary.BuildJTextFieldInlineBelow(18, 4, layout, txtTitle);
+        add(txtImageLocation);
+        txtWebLink = UIBuilderLibrary.BuildJTextFieldInlineBelow(18, 4, layout, txtImageLocation);
+        add(txtWebLink);
+    }
+
+    private void addLargeTextBox() {
+
+        // Create and position the label "Re-Suggestion List"
+        JLabel lblReSuggestionList = new JLabel("Re-Suggestion List");
+        layout.putConstraint(SpringLayout.SOUTH, lblReSuggestionList, 20, SpringLayout.SOUTH, btnSort); // Position above the text area
+        layout.putConstraint(SpringLayout.WEST, lblReSuggestionList, 5, SpringLayout.WEST, btnSort); // Align with the left of the text area
+        add(lblReSuggestionList);
+
+        JTextArea txtSuggestionList = new JTextArea();
+        txtSuggestionList.setLineWrap(true);
+        JScrollPane scrollPane = new JScrollPane(txtSuggestionList);
+        scrollPane.setPreferredSize(new Dimension(600, 100));
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        layout.putConstraint(SpringLayout.NORTH, scrollPane, 30, SpringLayout.SOUTH, btnSort);
+        layout.putConstraint(SpringLayout.WEST, scrollPane, 5, SpringLayout.WEST, lblReSuggestionList);
+        add(scrollPane);
+
+//        JLabel lblSuggestionList = UIBuilderLibrary.BuildJLabelInlineBelow("Suggestion List:", 20, layout, btnSort); // Adjusted here
+//        layout.putConstraint(SpringLayout.VERTICAL_CENTER, lblSuggestionList, 0, SpringLayout.VERTICAL_CENTER, scrollPane);
+//        layout.putConstraint(SpringLayout.EAST, lblSuggestionList, -5, SpringLayout.WEST, scrollPane);
+//        add(lblSuggestionList);
+
+    }
+
 
     void loadTestData() {
 RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
@@ -329,4 +361,26 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
         txtPrimaryMaterials.setText(RepurposingSuggestionArray[currentEntry].PrimaryMaterials);
         txtConstructionHints.setText(RepurposingSuggestionArray[currentEntry].ConstructionHints);
     }
+
+    // Other methods...
+
+    public void setRepurposingSuggestionArray(RepurposingSuggestion[] repurposingSuggestionArray) {
+        this.RepurposingSuggestionArray = repurposingSuggestionArray;
+    }
+
+    public void setNumberOfEntries(int numberOfEntries) {
+        this.numberOfEntries = numberOfEntries;
+    }
+
+    void triggerDisplayCurrentEntry() {
+        DisplayCurrentEntry();
+    }
+
+    public void setCurrentEntry(int index) {
+        if (index >= 0 && index < numberOfEntries) {
+            currentEntry = index;
+        }
+    }
+
+
 }

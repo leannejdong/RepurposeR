@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71a40eef-2e2b-43d9-a243-efe578fa14c8" name="Changes" comment="pre UI codes">
-      <change afterPath="$PROJECT_DIR$/src/AcceptanceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFormFileManagerIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFormTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepurposeR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RepurposeR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFormTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,10 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.AcceptanceTest.executor": "Run",
     "JUnit.MainFormFileManagerIntegrationTest.executor": "Run",
+    "JUnit.MainFormTest.testDataDisplay.executor": "Debug",
+    "JUnit.MainFormTest.testDataPopulation.executor": "Run",
     "JUnit.MainFormTest.testLoadTestData.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -93,7 +93,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AcceptanceTest">
+  <component name="RunManager" selected="JUnit.MainFormTest.testDataDisplay">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RepurposeR" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RepurposeR" />
       <option name="PACKAGE_NAME" value="" />
@@ -112,11 +119,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainFormTest.testLoadTestData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainFormTest.testDataDisplay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RepurposeR" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainFormTest" />
-      <option name="METHOD_NAME" value="testLoadTestData" />
+      <option name="METHOD_NAME" value="testDataDisplay" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainFormTest.testDataPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RepurposeR" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainFormTest" />
+      <option name="METHOD_NAME" value="testDataPopulation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,9 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainFormTest.testDataDisplay" />
+        <item itemvalue="JUnit.MainFormTest.testDataPopulation" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AcceptanceTest" />
         <item itemvalue="JUnit.MainFormFileManagerIntegrationTest" />
-        <item itemvalue="JUnit.MainFormTest.testLoadTestData" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +175,8 @@
       <workItem from="1713499564249" duration="2765000" />
       <workItem from="1713530791817" duration="1757000" />
       <workItem from="1713538948641" duration="562000" />
-      <workItem from="1713585051944" duration="5357000" />
+      <workItem from="1713585051944" duration="5486000" />
+      <workItem from="1713661132994" duration="21657000" />
     </task>
     <task id="LOCAL-00001" summary="pre UI codes">
       <option name="closed" value="true" />
@@ -192,10 +212,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainForm.java</url>
-          <line>187</line>
+          <line>219</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/MainForm.java</url>
+          <line>351</line>
+          <properties class="MainForm" method="DisplayCurrentEntry">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="txtTitle" language="JAVA" />
+        <watch expression="txtTitle" language="JAVA" />
+        <watch expression="txtTitle" language="JAVA" />
+        <watch expression="txtImageLocation" language="JAVA" />
+        <watch expression="txtWebLink" language="JAVA" />
+        <watch expression="txtPrimaryMaterials" language="JAVA" />
+        <watch expression="txtConstructionHints" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RepurposeR$MainFormTest_testDataDisplay.ic" NAME="MainFormTest.testDataDisplay Coverage Results" MODIFIED="1713704424557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
