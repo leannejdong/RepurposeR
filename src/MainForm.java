@@ -38,7 +38,7 @@ public class MainForm extends JFrame implements ActionListener {
      */
     public MainForm() throws HeadlessException {
         setTitle("Re-Purposing Suggestions");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 500);
         setLocation(400, 200);
         setLayout(layout);
@@ -58,7 +58,7 @@ public class MainForm extends JFrame implements ActionListener {
 
         createScrollableTextArea();
 
-
+// fixed 61-67 to allow Large Text Box to display text
         JScrollPane scrollB = getjScrollPane();
 //
 
@@ -77,6 +77,7 @@ public class MainForm extends JFrame implements ActionListener {
             for(int i = 0; i < data.count; i++){
                 System.out.println(data.fileData[i]);
             }
+
             numberOfEntries = data.count;
         }
         DisplayCurrentEntry();
@@ -138,7 +139,7 @@ public class MainForm extends JFrame implements ActionListener {
         scrollB.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         layout.putConstraint(SpringLayout.NORTH, scrollB, 20, SpringLayout.SOUTH, lblConstructionHints);
         layout.putConstraint(SpringLayout.WEST, scrollB, 20, SpringLayout.WEST, lblConstructionHints);
-        add(scrollB);
+        //add(scrollB);
         return scrollB;
     }
 
@@ -196,6 +197,7 @@ public class MainForm extends JFrame implements ActionListener {
 //        layout.putConstraint(SpringLayout.VERTICAL_CENTER, lblSuggestionList, 0, SpringLayout.VERTICAL_CENTER, scrollPane);
 //        layout.putConstraint(SpringLayout.EAST, lblSuggestionList, -5, SpringLayout.WEST, scrollPane);
 //        add(lblSuggestionList);
+
 
     }
 
