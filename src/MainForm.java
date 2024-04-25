@@ -22,6 +22,7 @@ public class MainForm extends JFrame implements ActionListener {
     JButton btnNew, btnSave, btnDelete, btnFind, btnExit;
 
     JTextArea txtOutput;
+
     JButton btnSort, btnBinary, btnFilterBy;
     JTextField txtFilterBy;
 
@@ -139,7 +140,7 @@ public class MainForm extends JFrame implements ActionListener {
         scrollB.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         layout.putConstraint(SpringLayout.NORTH, scrollB, 20, SpringLayout.SOUTH, lblConstructionHints);
         layout.putConstraint(SpringLayout.WEST, scrollB, 20, SpringLayout.WEST, lblConstructionHints);
-        //add(scrollB);
+        add(scrollB);
         return scrollB;
     }
 
@@ -184,9 +185,10 @@ public class MainForm extends JFrame implements ActionListener {
         layout.putConstraint(SpringLayout.WEST, lblReSuggestionList, 5, SpringLayout.WEST, btnSort); // Align with the left of the text area
         add(lblReSuggestionList);
 
-        JTextArea txtSuggestionList = new JTextArea();
-        txtSuggestionList.setLineWrap(true);
-        JScrollPane scrollPane = new JScrollPane(txtSuggestionList);
+        //JTextArea txtSuggestionList = new JTextArea();
+        txtOutput = new JTextArea();
+        txtOutput.setLineWrap(true);
+        JScrollPane scrollPane = new JScrollPane(txtOutput);
         scrollPane.setPreferredSize(new Dimension(600, 100));
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         layout.putConstraint(SpringLayout.NORTH, scrollPane, 30, SpringLayout.SOUTH, btnSort);
