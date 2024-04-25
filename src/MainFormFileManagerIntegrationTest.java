@@ -11,7 +11,7 @@ public class MainFormFileManagerIntegrationTest {
         MainForm mainForm = new MainForm();
         // Act: Call the loadTestData() method, which internally interacts with FileManager
         mainForm.loadTestData();
-        // Assert: Check if the test data is loaded correctly
+        // Assert: s
         assertEquals(4, mainForm.numberOfEntries); // Assuming loadTestData() loads 4 test entries
     }
 }

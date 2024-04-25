@@ -1,7 +1,6 @@
 /**
  * Represents data read from a file and written to a file
  */
-
 public class FileData {
     /**
      * Array of repurposing suggestions

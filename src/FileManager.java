@@ -9,7 +9,7 @@ import java.io.FileWriter;
  */
 
 public class FileManager {
-    String fileName = "RePurposingSuggestions.txt";
+    String fileName = "/Users/leanne/devTafe/PRG443/RepurposeR/src/RePurposingSuggestions.txt";
 
     /**
      * Write repurposing suggestions to the file
