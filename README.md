@@ -28,7 +28,7 @@ Our Repurposing Suggestions Software project aims to streamline the process of r
 
 ## Build
 
-![Re-purposing Suggestions](R.png)
+![Re-purposing Suggestions](R.jpg)
 
 ## Class diagram
 
@@ -150,3 +150,7 @@ graph TD;
     actionPerformed -->|btnBinary| handleBinarySearch;
     actionPerformed -->|btnFilterBy| handleFilterBy;
 ```
+
+## Documentation
+
+![Re-purposing Suggestion](javadoc.png)
