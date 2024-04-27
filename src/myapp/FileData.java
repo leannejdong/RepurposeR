@@ -1,3 +1,5 @@
+package myapp;
+
 /**
  * Represents data read from a file and written to a file
  */

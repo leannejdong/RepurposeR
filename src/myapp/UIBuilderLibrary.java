@@ -1,4 +1,4 @@
-
+package myapp;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,3 +1,5 @@
+package myapp;
+
 /**
  * This class is used to store the information for a repurposing suggestion.
  * It contains the title of the suggestion, the location of the image, a web link to the suggestion, the primary materials used in the suggestion, and construction hints for the suggestion.

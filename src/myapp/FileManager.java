@@ -1,3 +1,5 @@
+package myapp;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -9,7 +11,7 @@ import java.io.FileWriter;
  */
 
 public class FileManager {
-    String fileName = "/Users/leanne/devTafe/PRG443/RepurposeR/src/RePurposingSuggestions.txt";
+    String fileName = "RePurposingSuggestions.txt";
 
     /**
      * Write repurposing suggestions to the file

@@ -1,4 +1,5 @@
-//import org.junit.jupiter.api.Test;
+package myapp;//import org.junit.jupiter.api.Test;
+import myapp.MainForm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
