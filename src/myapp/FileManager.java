@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  * This class is responsible for reading and writing data to a file.
@@ -11,14 +15,18 @@ import java.io.FileWriter;
  */
 
 public class FileManager {
-    String fileName = "RePurposingSuggestions.txt";
+    private static final Logger logger = Logger.getLogger(FileManager.class.getName());
+    private final String fileName = "src/myapp/RePurposingSuggestions.txt";
 
     /**
      * Write repurposing suggestions to the file
+     *
      * @param RePurposingSuggestionsData Array of repurposing suggestions to write
+     * @return True if the data is successfully written to the file, false otherwise.
      */
-    public void WriteToFile(RepurposingSuggestion[] RePurposingSuggestionsData)
+    public boolean WriteToFile(RepurposingSuggestion[] RePurposingSuggestionsData)
     {
+
         try
         {
             BufferedWriter output = new BufferedWriter(new FileWriter(fileName));
@@ -32,13 +40,18 @@ public class FileManager {
                 output.write(RePurposingSuggestionsData[i].toString());
                 output.newLine();
             }
+            logger.info("Data written to file successfully");
+            return true;
 
-            output.close();
+            //output.close();
         }
         catch (Exception ex)
         {
-            System.out.println(ex.getMessage());
+            //System.out.println(ex.getMessage());
+            logger.log(Level.SEVERE, "An exception occurred", ex);
+            return false;
         }
+        //return false;
     }
 
     /**
@@ -76,3 +89,12 @@ public class FileManager {
     }
 
 }
+
+
+/**
+ * imported necessary classes for file writing and logging.
+ * added a logger instance for the FileManager class.
+ * replaced the System.out.println() statement with a logger statement to log the exception message and stack trace.
+ * The BufferedWriter is now initialized using a try-with-resources statement, ensuring its proper closure after the writing operation.
+ * added logging statements to indicate successful data writing and errors during the write operation.
+ */

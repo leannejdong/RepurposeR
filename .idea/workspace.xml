@@ -6,29 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="71a40eef-2e2b-43d9-a243-efe578fa14c8" name="Changes" comment="pre UI codes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/MainForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/MainForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/RepurposingSuggestion.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/RepurposingSuggestion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/UIBuilderLibrary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/UIBuilderLibrary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/doc/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RePurposingSuggestions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RePurposingSuggestions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myapp/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myapp/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myapp/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myapp/MainForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myapp/RePurposingSuggestions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/myapp/RePurposingSuggestions.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,37 +58,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.myapp.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.AcceptanceTest.executor": "Run",
-    "JUnit.MainFormFileManagerIntegrationTest.executor": "Run",
-    "JUnit.MainFormFileManagerIntegrationTest.testLoadTestDataWithFileManagerIntegration.executor": "Run",
-    "JUnit.MainFormTest.testDataDisplay.executor": "Run",
-    "JUnit.MainFormTest.testDataPopulation.executor": "Run",
-    "JUnit.MainFormTest.testLoadTestData.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.myapp.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.AcceptanceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainFormFileManagerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainFormFileManagerIntegrationTest.testLoadTestDataWithFileManagerIntegration.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainFormTest.testDataDisplay.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainFormTest.testDataPopulation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainFormTest.testLoadTestData.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -119,7 +100,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AcceptanceTest">
+  <component name="RunManager" selected="Application.myapp.Main">
     <configuration name="myapp.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="myapp.Main" />
       <module name="RepurposeR" />
@@ -176,11 +157,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.myapp.Main" />
         <item itemvalue="JUnit.AcceptanceTest" />
         <item itemvalue="JUnit.MainFormTest.testDataDisplay" />
         <item itemvalue="JUnit.MainFormTest.testDataPopulation" />
         <item itemvalue="JUnit.MainFormFileManagerIntegrationTest.testLoadTestDataWithFileManagerIntegration" />
-        <item itemvalue="Application.myapp.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -222,6 +203,11 @@
       <workItem from="1714082098471" duration="498000" />
       <workItem from="1714143858571" duration="876000" />
       <workItem from="1714174525071" duration="2284000" />
+      <workItem from="1714205431157" duration="431000" />
+      <workItem from="1715168141122" duration="5002000" />
+      <workItem from="1715354479769" duration="836000" />
+      <workItem from="1715400154773" duration="15719000" />
+      <workItem from="1715474630509" duration="12654000" />
     </task>
     <task id="LOCAL-00001" summary="pre UI codes">
       <option name="closed" value="true" />

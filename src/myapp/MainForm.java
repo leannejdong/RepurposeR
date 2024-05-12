@@ -1,4 +1,4 @@
-package myapp;
+package myapp;  // for package myapp;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,11 +12,16 @@ import java.util.Locale;
 /**
  * This class is the main form of the application.
  * It contains the UI elements and event handlers for the form.
+ * Declare the `MainForm` class that extends `JFrame` and implements the `ActionListener` interface.
  */
 public class MainForm extends JFrame implements ActionListener {
     FileManager fileManager = new FileManager();
     SpringLayout layout = new SpringLayout();
+    /**
+     * Declare the UI elements for the form.
+     Such as labels, text fields, buttons, and text areas.
 
+     */
     JLabel lblTitle, lblImageLocation, lblWebLink, lblPrimaryMaterials, lblConstructionHints, lblFind;
     JTextField txtTitle, txtImageLocation, txtWebLink, txtFind;
     JTextArea txtPrimaryMaterials, txtConstructionHints;
@@ -90,6 +95,11 @@ public class MainForm extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * Build the buttons and text fields for the form.
+     * @param scrollB
+     */
+
     private void buildButtonAndTextfield(JScrollPane scrollB) {
         lblFind = UIBuilderLibrary.BuildJLabelWithNorthWestAnchor("Find:", 380, 20, layout, this);
         add(lblFind);
@@ -157,7 +167,7 @@ public class MainForm extends JFrame implements ActionListener {
         add(scrollA);
     }
 
-    /**
+    /** UI building methods
      * Create the text fields for the form
      */
     private void createLabelAndTextfield(SpringLayout layout) {
@@ -205,6 +215,12 @@ public class MainForm extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * Load test data into the form.
+     * Methods to load test data into the RepurposingSuggestionArray.
+     * This method is used to populate the form with test data for development and testing purposes.
+     *
+     */
 
     void loadTestData() {
 RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
@@ -230,14 +246,18 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
                 "Options: recycled planks of wood, metal",
                 "1. Build herb garden structure, 2. Clear level ground, 3. Place garden securely");
 
-        numberOfEntries = 4;
+        numberOfEntries = RepurposingSuggestionArray.length;
 
     }
 
 
     /**
      * Event handler for the buttons on the form.
+     * actionPerformed() method handles events from various buttons.
+     * Buttons like "New", "Save", "Delete", navigation buttons, and filtering buttons have specific actions.
+     * Methods like DisplayCurrentEntry() update the UI with the current entry's details.
      * @param e ActionEvent object representing the event performed
+     *
      */
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -269,20 +289,32 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
                 RepurposingSuggestionArray[numberOfEntries] = new RepurposingSuggestion();
                 numberOfEntries++;
                 currentEntry = numberOfEntries - 1;
+                if(fileManager.WriteToFile(RepurposingSuggestionArray)){
+                    JOptionPane.showMessageDialog(this, "New Entry Saved Successfully");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error saving new entry");
+                }
             } else {
                 RepurposingSuggestionArray[currentEntry].Title = txtTitle.getText();
                 RepurposingSuggestionArray[currentEntry].ImageLocation = txtImageLocation.getText();
                 RepurposingSuggestionArray[currentEntry].WebLink = txtWebLink.getText();
                 RepurposingSuggestionArray[currentEntry].PrimaryMaterials = txtPrimaryMaterials.getText();
                 RepurposingSuggestionArray[currentEntry].ConstructionHints = txtConstructionHints.getText();
+                if(fileManager.WriteToFile(RepurposingSuggestionArray)){
+                    JOptionPane.showMessageDialog(this, "Entry Updated Successfully");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error updating entry. Please try again");
+                }
             }
             isNewEntry = false;
             fileManager.WriteToFile(RepurposingSuggestionArray);
+
+
         }
         if (e.getSource() == btnDelete) {
-            int result = JOptionPane.showConfirmDialog(this, JOptionPane.ERROR_MESSAGE,
-                    "Are you sure you want to delete this entry?", JOptionPane.YES_NO_OPTION);
-            if (result == JOptionPane.YES_OPTION) {
+            int result = JOptionPane.showConfirmDialog(this,
+                    "Are you sure you want to delete this entry?","Delete Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.ERROR_MESSAGE);
+            if (result != JOptionPane.YES_OPTION) {
                 return;
             }
             for(int i = currentEntry; i < numberOfEntries; i++) {
@@ -320,10 +352,10 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
             DisplayCurrentEntry();
         }
         if(e.getSource()==btnFilterBy){
-            String filter = txtFilterBy.getText();
-            txtOutput.setText("");
-            for(int i = 0; i < numberOfEntries; i++){
-                if(RepurposingSuggestionArray[i].ConstructionHints.toLowerCase().contains(filter.toLowerCase())){
+            String filter = txtFilterBy.getText().toLowerCase();;
+            txtOutput.setText("ITEMS MATCHING FILTER:\n");
+            for(int i = 0; i < numberOfEntries; i++){  //to-fix
+                if(RepurposingSuggestionArray[i].PrimaryMaterials.toLowerCase().contains(filter.toLowerCase())){
                     txtOutput.append(RepurposingSuggestionArray[i].toString() + "\n");
                 }
             }
@@ -350,9 +382,11 @@ RepurposingSuggestionArray[0] = new RepurposingSuggestion("Bird Bath",
                 }
             }
         }
+
+
     }
 
-    /**
+    /** Utility method
      * Display the current entry in the form
      */
     private void DisplayCurrentEntry()
