@@ -16,7 +16,8 @@ import java.util.logging.Logger;
 
 public class FileManager {
     private static final Logger logger = Logger.getLogger(FileManager.class.getName());
-    private final String fileName = "src/myapp/RePurposingSuggestions.txt";
+   // private final String fileName = "src/myapp/RePurposingSuggestions.txt";
+    private final String fileName = "RePurposingSuggestions.txt";
 
     /**
      * Write repurposing suggestions to the file

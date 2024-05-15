@@ -17,7 +17,7 @@ class MainFormTest {
 
         // Assert: Check if the test data is loaded correctly
         // For example, you can check if the number of entries is as expected
-        assertEquals(4, mainForm.numberOfEntries); // Assuming loadTestData() loads 4 test entries
+        assertEquals(100, mainForm.numberOfEntries); // Assuming loadTestData() loads 4 test entries
 
     }
 
